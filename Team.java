@@ -7,7 +7,6 @@ public class Team <T extends Warrior> implements Iterable<T> {
     private Comandor comandor;
 
     public Team(Comandor comandor){
-
         this.comandor = comandor;
     }
 
@@ -28,9 +27,16 @@ public class Team <T extends Warrior> implements Iterable<T> {
         int sumDamage = 0;
         for (T item:warriors) {
             sumDamage+=item.getWeapon().damage();
-
         }
         return sumDamage;
+    }
+
+    public int getAllDefense(){
+        int sumDefense = 0;
+        for (T item:warriors) {
+            sumDefense += item.getShield().armor();
+        }
+        return sumDefense;
     }
 
     public int getAllHealthPoint(){

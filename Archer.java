@@ -1,6 +1,6 @@
-public class Archer extends Warrior<Bow>{
-    public Archer(String name, int healthpoint, Bow bow) {
-        super(name, healthpoint, bow);
+public class Archer extends Warrior<Bow, Buckler>{
+    public Archer(String name, int healthpoint, Bow bow, Buckler buckler) {
+        super(name, healthpoint, bow, buckler);
     }
 
     @Override
